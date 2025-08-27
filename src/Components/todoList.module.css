@@ -1,0 +1,54 @@
+.container{
+    background-color:#4e9e97;
+    margin: auto;
+    width:500px;
+    height: 500px;
+    border-radius: 30px;
+    
+    
+}
+body{
+    background-color:#046D77;
+    box-shadow: 0 0 px rgba(0,0,0,.5)
+}
+h1{
+    color:white;
+    padding-top: 20px;
+    font-family: sans-serif;
+
+}
+.todo{
+    border:1px solid white;
+    padding: 10px;
+    margin-right: 12px;
+    border-radius: 12px;
+    width: 50%;
+    outline: none;
+    margin-bottom: 30px;
+}
+.btn{
+    background-color: white;
+    border: 1px solid white;
+    padding: 15px;
+    font-family: sans-serif;
+    color:gray;
+    font-weight: bold;
+    border-radius: 30px;
+}
+.btn:hover{
+    background-color:#046D77 ;
+    color: white;
+}
+label{
+    margin-top: 5px;
+    color: white;
+    padding:15px;
+    display:flex;
+    
+}
+.inputContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+ 
+}
