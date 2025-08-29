@@ -52,3 +52,22 @@ label{
     justify-content: flex-start;
  
 }
+.items{
+    color: white;
+    font-style: italic;
+    text-transform: capitalize;
+}
+.completed{
+    color: #fff;
+    font-family: sans-serif;
+}
+ul{
+    display: flex;
+ 
+}
+.li{
+    margin-left: 20px;
+    list-style-type: none;
+    color: white;
+    display: flex;
+}

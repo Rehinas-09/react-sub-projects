@@ -4,26 +4,64 @@ export class TodoList extends Component {
    constructor(props){
     super(props)
      this.state={
-       selectedItems:[]
+       selectedItems:[],
+       newItem:"",
+       todo:["trip to Goa","buy a porshe","buy a volswagon gt","sky drive"]
      }
+   } 
+  changeHandler=(e)=>{
+    const {value,checked}=e.target;  
+    if(checked){
+      this.setState((prevState)=>({
+           selectedItems:[...prevState.selectedItems,value]
+      })) 
+    }
+      else{
+         this.setState((prevState)=>({
+             selectedItems:prevState.selectedItems.filter((item)=>item!==value)
+         })) 
+      } 
+   } 
+   handleSearchChange=e=>{
+    this.setState({
+     newItem:e.target.value,  
+    }) 
    }
-   changeHandler=(e)=>{
-    const {value,checked}=e.target;
+   handleSubmit=()=>{
+    if(this.state.newItem.trim()!==''){
+      this.setState((prevState)=>({
+         todo:[...prevState.todo,prevState.newItem],
+         newItem:""
+      }))
+        
+    }
    }
+   
   render() {
     return (
       <div className={styles.container}>
         <h1>Todo List</h1>
-        <input type="text" placeholder='Enter New TodoList' className={styles.todo} /><button className={styles.btn}>Submit</button><br></br>
+        <input type="text" placeholder='Enter New TodoList' className={styles.todo} onChange={this.handleSearchChange}/><button className={styles.btn} onClick={this.handleSubmit}>Submit</button><br></br>
         <div className={styles.inputContainer}>
-        <label><input type='checkbox' value="Trip to Goa" onchange={this.changeHnadler}/>Trip to Goa</label>
-        <label><input type='checkbox' value="buy a porshe" onchange={this.changeHnadler}/>Buy a Porshe</label>
-        <label><input type='checkbox' value='buy a volswagon gt' onchange={this.changeHandler}/>buy a volswagon gt</label>
-        <label><input type='checkbox' value='sky drive' onchange={this.changeHnadler}/>Sky drive</label>
-        </div>
-      </div>
+
+         { 
+          this.state.todo.map((item,index)=>{
+          return  <label key={index}><input type='checkbox' value={item} onChange={this.changeHandler}></input>{item}</label>
+          }) 
+        }
+        </div> 
+        
+        <h2 className={styles.completed}>Completed TodoList</h2>
+        {this.state.selectedItems.length>0?(
+          <ul>
+            {this.state.selectedItems.map((item,index)=>{ 
+             return <li key={index} className={styles.li}>{item}</li>
+            })}
+          </ul>
+        ):(<p className={styles.items}>no item selected</p>)}
+      </div> 
     )
-  }   
+  }    
   
 }
   
