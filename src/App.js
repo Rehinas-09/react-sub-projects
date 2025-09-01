@@ -48,6 +48,8 @@ import ComponentC from './Components/ComponentC';
 import { UserProvider } from './Components/UserContext';
 import POstList from './Components/POstList';
 import PostForm from './Components/PostForm';
+import ContactList from './Components/ContactList';
+import RecipiesParent from './Components/RecipiesParent';
 
 function App() {
   return (
@@ -70,7 +72,9 @@ function App() {
      )}/> */}
        {/* <ComponentC/> */}
        {/* <POstList/> */}
-        <PostForm/>
+        {/* <PostForm/> */}
+        {/* <ContactList/> */}
+        <RecipiesParent/>
         
     </div>   
   );}    

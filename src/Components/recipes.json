@@ -1,0 +1,16 @@
+[
+    {
+        "id":1,
+        "title":"Pasta Carbonara",
+        "image":"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Fpasta&psig=AOvVaw3AN4MzAhlmiwTifimHRsbJ&ust=1756793377676000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPirlrzzto8DFQAAAAAdAAAAABAE",
+        "ingredients":["Spaghetti","Eggs","Bacon","Parmesan"],
+        "steps":["Boil Pasta","Fry bacon","Mix eggs with cheese","Combain all"]      
+    },
+    {
+       "id":2,
+       "title":"Paneer Butter Masala",
+       "image":"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.indianhealthyrecipes.com%2Fpaneer-butter-masala-restaurant-style%2F&psig=AOvVaw1W0X3aYGBNTxhSApEuCA8x&ust=1756793521266000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCIjynYD0to8DFQAAAAAdAAAAABAE",
+       "ingredients":["Paneer","Butter","Tomato","Spices"],
+       "steps":["Make gravy","Add Paneer","Cook for 10 minutes"]  
+      }
+]
